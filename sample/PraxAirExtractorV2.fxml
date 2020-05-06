@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0">
+      <children>
+        <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Label>
+            <GridPane layoutY="49.0" prefHeight="598.0" prefWidth="1335.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="64.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.0" minWidth="10.0" prefWidth="184.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="57.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="168.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="66.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="9.0" prefWidth="143.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="81.0" minWidth="10.0" prefWidth="41.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="168.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="76.0" minWidth="10.0" prefWidth="41.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="142.0" minWidth="10.0" prefWidth="131.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="76.0" minWidth="10.0" prefWidth="67.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="162.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="198.0" minHeight="0.0" prefHeight="84.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="198.0" minHeight="0.0" prefHeight="101.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="328.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="323.0" minHeight="10.0" prefHeight="113.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="318.0" minHeight="10.0" prefHeight="94.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="318.0" minHeight="10.0" prefHeight="92.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Nox 500">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Nox 2500" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Nox 10k" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="NO(C) 500" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="NO(C) 2500" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="NO(C) 10k" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="THC 500" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="THC 2500" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="THC 10k" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="CH4 500" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="CH4 2500" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="CH4 10k" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="CO(L) 5000" GridPane.columnIndex="4">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="CO(H) 1.6%" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="CO2 16%" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="EGR 16%" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="O2 25%" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="N2 1" GridPane.columnIndex="6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="N2 2" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="N2 3" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="N2 4" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Air 1" GridPane.columnIndex="8">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Air 2" GridPane.columnIndex="8" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Air 3" GridPane.columnIndex="8" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Air 4" GridPane.columnIndex="8" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="O2 100% 1" GridPane.columnIndex="10">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="O2 100% 2" GridPane.columnIndex="10" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="O2 100% 3" GridPane.columnIndex="10" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="O2 100% 4" GridPane.columnIndex="10" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Fuel 1" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Fuel 2" GridPane.columnIndex="8" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nox500TextField" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" />
+                  <TextField fx:id="nox2500TextField" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
+                  <TextField fx:id="nox10kTextField" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" />
+                  <TextField fx:id="no500TextField" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" />
+                  <TextField fx:id="no2500TextField" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" />
+                  <TextField fx:id="no10kTextField" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" />
+                  <TextField fx:id="thc500TextField" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" />
+                  <TextField fx:id="thc2500TextField" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
+                  <TextField fx:id="thc10kTextField" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" />
+                  <TextField fx:id="ch4500TextField" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" />
+                  <TextField fx:id="ch42500TextField" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" />
+                  <TextField fx:id="ch410kTextField" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" />
+                  <TextField fx:id="co5000TextField" GridPane.columnIndex="5" GridPane.hgrow="ALWAYS" />
+                  <TextField fx:id="cohighTextField" GridPane.columnIndex="5" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
+                  <TextField fx:id="co216TextField" GridPane.columnIndex="5" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" />
+                  <TextField fx:id="eco2TextField" GridPane.columnIndex="5" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" />
+                  <TextField fx:id="o225TextField" GridPane.columnIndex="5" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" />
+                  <TextField fx:id="n21TextField" GridPane.columnIndex="7" GridPane.hgrow="ALWAYS" />
+                  <TextField fx:id="n22TextField" GridPane.columnIndex="7" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
+                  <TextField fx:id="n23TextField" GridPane.columnIndex="7" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" />
+                  <TextField fx:id="n24TextField" GridPane.columnIndex="7" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" />
+                  <TextField fx:id="air1TextField" prefHeight="25.0" prefWidth="166.0" GridPane.columnIndex="9" GridPane.hgrow="ALWAYS" />
+                  <TextField fx:id="air2TextField" GridPane.columnIndex="9" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
+                  <TextField fx:id="air3TextField" GridPane.columnIndex="9" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" />
+                  <TextField fx:id="air4TextField" layoutX="595.0" layoutY="251.0" GridPane.columnIndex="9" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" />
+                  <TextField fx:id="o21001TextField" GridPane.columnIndex="11" GridPane.hgrow="ALWAYS" />
+                  <TextField fx:id="o21002TextField" GridPane.columnIndex="11" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
+                  <TextField fx:id="o21003TextField" GridPane.columnIndex="11" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" />
+                  <TextField fx:id="o21004TextField" GridPane.columnIndex="11" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" />
+                  <TextField fx:id="fuel1TextField" GridPane.columnIndex="7" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" />
+                  <TextField fx:id="fuel2TextField" GridPane.columnIndex="9" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" />
+                  <Button fx:id="export1016Button" onMouseClicked="#writeTo1016" mnemonicParsing="false" prefHeight="91.0" prefWidth="130.0" text="Export to Cal Sheet" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="resetButton" mnemonicParsing="false" onMouseClicked="#resetForm" prefHeight="106.0" prefWidth="120.0" text="Reset" GridPane.columnIndex="7" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+            <GridPane layoutX="19.0" prefHeight="83.0" prefWidth="1316.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="584.0" minWidth="0.0" prefWidth="110.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1034.0" minWidth="10.0" prefWidth="158.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1034.0" minWidth="10.0" prefWidth="83.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1034.0" minWidth="0.0" prefWidth="220.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1034.0" minWidth="10.0" prefWidth="128.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1034.0" minWidth="10.0" prefWidth="224.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1034.0" minWidth="10.0" prefWidth="128.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1034.0" minWidth="10.0" prefWidth="280.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="bottleDirButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#setBottleDirectory" prefHeight="31.0" prefWidth="108.0" text="Set Directory" />
+                  <TextField fx:id="bottleDirTextField" prefHeight="25.0" prefWidth="103.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" />
+                  <Button fx:id="calSheetButton" mnemonicParsing="false" prefHeight="57.0" prefWidth="150" text="Select Cal Sheet" GridPane.columnIndex="2" GridPane.columnSpan="1" wrapText="true"/>
+                  <TextField fx:id="calSheetTextField" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.columnSpan="1" />
+               </children>
+            </GridPane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
