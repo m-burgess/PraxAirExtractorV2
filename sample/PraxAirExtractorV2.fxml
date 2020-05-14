@@ -258,7 +258,7 @@
                <children>
                   <Button fx:id="bottleDirButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#setBottleDirectory" prefHeight="31.0" prefWidth="108.0" text="Set Directory" />
                   <TextField fx:id="bottleDirTextField" prefHeight="25.0" prefWidth="103.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" />
-                  <Button fx:id="calSheetButton" mnemonicParsing="false" prefHeight="57.0" prefWidth="150" text="Select Cal Sheet" GridPane.columnIndex="2" GridPane.columnSpan="1" wrapText="true"/>
+                  <Button fx:id="calSheetButton" mnemonicParsing="false" prefHeight="57.0" prefWidth="150" text="Select Cal Sheet" onMouseClicked="#setCalSheetDirectory" GridPane.columnIndex="2" GridPane.columnSpan="1" wrapText="true"/>
                   <TextField fx:id="calSheetTextField" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.columnSpan="1" />
                </children>
             </GridPane>
