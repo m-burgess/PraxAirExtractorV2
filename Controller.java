@@ -738,7 +738,7 @@ public class Controller {
                     //NO(C) 500 Span value
                     String no500replaceText1 = fileTextArray[i].replace("Nitric oxide 2.5 Chemically Pure (CP) 475 ppm ", "");
                     String no500replaceText2 = no500replaceText1.replace("Nitric oxide 475 ppm ", "");
-                    String no500span = no500replaceText2.replace(" ppm 1", "");
+                    String no500span = no500replaceText2.substring(0, 3);
 
                     no500List.add(no500span);
 
@@ -825,7 +825,7 @@ public class Controller {
                     //NO(C) 2500 Span value
                     String no2500replaceText1 = fileTextArray[i].replace("Nitric oxide 2.5 Chemically Pure (CP) 2375 ppm ", "");
                     String no2500replaceText2 = no2500replaceText1.replace("Nitric oxide 2375 ppm ", "");
-                    String no2500span = no2500replaceText2.replace(" ppm 1", "");
+                    String no2500span = no2500replaceText2.substring(0, 4);
 
                     no2500List.add(no2500span);
 
@@ -999,7 +999,7 @@ public class Controller {
                     String thc500replaceText1 = fileTextArray[i].replace("Propane 158 ppm ", "");
                     String thc500replaceText2 = thc500replaceText1.replace("Propane 4.0 Research 158 ppm ", "");
                     String thc500replaceText3 = thc500replaceText2.replace("Propane 2.5 Instrument 158 ppm ", "");
-                    String thc500span = thc500replaceText3.replace(" ppm 1", "");
+                    String thc500span = thc500replaceText3.substring(0, 3);
                     double thc500newspan = Double.parseDouble(thc500span);
                     double thc500spanx3 = thc500newspan * 3;
                     BigDecimal thc500spanDecimal = new BigDecimal(Double.toString(thc500spanx3));
@@ -1097,7 +1097,7 @@ public class Controller {
                     String thc2500replaceText1 = fileTextArray[i].replace("Propane 2.5 Instrument 792 ppm ", "");
                     String thc2500replaceText2 = thc2500replaceText1.replace("Propane 792 ppm ", "");
                     String thc2500replaceText3 = thc2500replaceText2.replace("Propane 4.0 Research 792 ppm ", "");
-                    String thc2500span = thc2500replaceText3.replace(" ppm 1", "");
+                    String thc2500span = thc2500replaceText3.substring(0, 3);
                     int thc2500spanint = Integer.parseInt(thc2500span);
                     int thc2500spanx3 = thc2500spanint * 3;
                     String thc2500newspan = String.valueOf(thc2500spanx3);
@@ -1284,7 +1284,7 @@ public class Controller {
                     //CH4 500 Span value
                     String ch4500replaceText1 = fileTextArray[i].replace("Methane 3.7 Ultra High Purity 475 ppm ", "");
                     String ch4500replaceText2 = ch4500replaceText1.replace("Methane 475 ppm ", "");
-                    String ch4500span = ch4500replaceText2.replace(" ppm 1", "");
+                    String ch4500span = ch4500replaceText2.substring(0, 3);
 
                     ch4500List.add(ch4500span);
 
@@ -1372,7 +1372,7 @@ public class Controller {
                     //CH4 2500 Span value
                     String ch42500replaceText1 = fileTextArray[i].replace("Methane 2500 ppm ", "");
                     String ch42500replaceText2 = ch42500replaceText1.replace("Methane 3.7 Ultra High Purity 2500 ppm ", "");
-                    String ch42500span = ch42500replaceText2.replace(" ppm 1", "");
+                    String ch42500span = ch42500replaceText2.substring(0, 4);
 
                     ch42500List.add(ch42500span);
 
@@ -3178,8 +3178,7 @@ try {
                 //1016 N2 #2 Cylinder Number
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 23, 4, n22List.get(0));
             } else {
-                //1016 N2 #2 Lot Number
-                excelWriter(calSheetWorkbook, calSheetSheet, 1, 24, 4, "N/A");
+
 
                 //1016 N2 #2 Analysis Cylinder
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 22, 4, "N/A");
@@ -3202,8 +3201,6 @@ try {
                 //1016 N2 #3 Cylinder Number
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 23, 5, n23List.get(0));
             } else {
-                //1016 N2 #3 Lot Number
-                excelWriter(calSheetWorkbook, calSheetSheet, 1, 24, 5, "N/A");
 
                 //1016 N2 #3 Analysis Cylinder
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 22, 5, "N/A");
@@ -3226,8 +3223,6 @@ try {
                 //1016 N2 #4 Cylinder Number
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 23, 6, n24List.get(0));
             } else {
-                //1016 N2 #4 Lot Number
-                excelWriter(calSheetWorkbook, calSheetSheet, 1, 24, 6, "N/A");
 
                 //1016 N2 #3 Analysis Cylinder
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 22, 6, "N/A");
@@ -3250,8 +3245,6 @@ try {
                 //1016 Air #1 Cylinder Number
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 29, 3, air1List.get(0));
             } else {
-                //1016 Air #1 Lot Number
-                excelWriter(calSheetWorkbook, calSheetSheet, 1, 30, 3, "N/A");
 
                 //1016 Air #1 Analysis Cylinder
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 28, 3, "N/A");
@@ -3274,8 +3267,6 @@ try {
                 //1016 Air #2 Cylinder Number
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 29, 4, air2List.get(0));
             } else {
-                //1016 Air #2 Lot Number
-                excelWriter(calSheetWorkbook, calSheetSheet, 1, 30, 4, "N/A");
 
                 //1016 Air #2 Analysis Cylinder
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 28, 4, "N/A");
@@ -3299,8 +3290,6 @@ try {
                 //1016 Air #3 Cylinder Number
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 29, 5, air3List.get(0));
             } else {
-                //1016 Air #3 Lot Number
-                excelWriter(calSheetWorkbook, calSheetSheet, 1, 30, 5, "N/A");
 
                 //1016 Air #3 Analysis Cylinder
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 28, 5, "N/A");
@@ -3322,8 +3311,6 @@ try {
                 //1016 Air #4 Cylinder Number
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 29, 6, air4List.get(0));
             } else {
-                //1016 Air #4 Lot Number
-                excelWriter(calSheetWorkbook, calSheetSheet, 1, 30, 6, "N/A");
 
                 //1016 Air #4 Analysis Cylinder
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 28, 6, "N/A");
@@ -3347,8 +3334,6 @@ try {
                 //1016 fuel 1 cylinder number
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 35, 3, fuel1List.get(0));
             } else {
-                //1016 Fuel 1 Lot
-                excelWriter(calSheetWorkbook, calSheetSheet, 1, 36, 3, "N/A");
 
                 //1016 Fuel 1 analysis cylinder
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 34, 3, "N/A");
@@ -3370,8 +3355,6 @@ try {
                 //1016 fuel 2 cylinder number
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 35, 4, fuel2List.get(0));
             } else {
-                //1016 Fuel 2 Lot
-                excelWriter(calSheetWorkbook, calSheetSheet, 1, 36, 4, "N/A");
 
                 //1016 Fuel 2 analysis cylinder
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 34, 4, "N/A");
@@ -3399,8 +3382,7 @@ try {
 
 
             } else {
-                //1040 O2 100% #1 Lot Number
-                excelWriter(calSheetWorkbook, calSheetSheet, 1, 42, 3, "N/A");
+
                 //1040 O2 100% #1 Analysis Cylinder
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 40, 3, "N/A");
             }
@@ -3426,8 +3408,6 @@ try {
 
 
             } else {
-                //1040 O2 100% #1 Lot Number
-                excelWriter(calSheetWorkbook, calSheetSheet, 1, 42, 4, "N/A");
                 //1040 O2 100% #2 Analysis Cylinder
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 40, 4, "N/A");
             }
@@ -3453,8 +3433,7 @@ try {
 
 
             } else {
-                //1040 O2 100% #1 Lot Number
-                excelWriter(calSheetWorkbook, calSheetSheet, 1, 42, 5, "N/A");
+
                 //1040 O2 100% #3 Analysis Cylinder
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 40, 5, "N/A");
             }
@@ -3464,24 +3443,22 @@ try {
             if (!"".equals(o21004TextField.getText())) {
 
                 //1040 O2 100% #3 Lot Number
-                excelWriter(calSheetWorkbook, calSheetSheet, 1, 42, 6, o21003List.get(4));
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 42, 6, o21004List.get(4));
 
                 //1040 O2 100% #3 Analysis Cylinder
-                excelWriter(calSheetWorkbook, calSheetSheet, 1, 40, 6, o21003List.get(2));
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 40, 6, o21004List.get(2));
 
                 //1040 O2 100% #3 Certification Date
-                excelWriter(calSheetWorkbook, calSheetSheet, 1, 43, 6, o21003List.get(3));
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 43, 6, o21004List.get(3));
 
                 //1040 O2 100% #3 Number
-                excelWriter(calSheetWorkbook, calSheetSheet, 1, 41, 6, o21003List.get(1));
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 41, 6, o21004List.get(1));
 
                 //1040 O2 100% #3 Concentration
-                excelWriter(calSheetWorkbook, calSheetSheet, 1, 45, 6, o21003List.get(0));
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 45, 6, o21004List.get(0));
 
 
             } else {
-                //1040 O2 100% #1 Lot Number
-                excelWriter(calSheetWorkbook, calSheetSheet, 1, 42, 6, "N/A");
 
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 40, 6, "N/A");
             }
@@ -3501,7 +3478,7 @@ try {
 
             openSpreadSheet(calSheetFile);
         }catch(Exception e) {
-            JOptionPane.showMessageDialog(null,e);
+            JOptionPane.showMessageDialog(null, e.toString());
         }
 
 
