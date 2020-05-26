@@ -3000,385 +3000,387 @@ try {
 
     public void writeTo1016() throws IOException, ParseException {
 
-        String path = bottleDirTextField.getText().replace("Bottles", "");
+        try {
 
-        extractFiles();
-        orderLists();
+            String path = bottleDirTextField.getText().replace("Bottles", "");
 
-        //**************************************************************************************************************
-        //Span Cylinder Loops
-        //**************************************************************************************************************
+            extractFiles();
+            orderLists();
 
-        //Opening cal sheet
-        File calSheetFile = new File(path + calSheetTextField.getText());
+            //**************************************************************************************************************
+            //Span Cylinder Loops
+            //**************************************************************************************************************
 
-        FileInputStream calSheetInputStream = new FileInputStream(calSheetFile);
-        Workbook calSheetWorkbook = WorkbookFactory.create(calSheetInputStream);
-        Sheet calSheetSheet = calSheetWorkbook.getSheetAt(1);
+            //Opening cal sheet
+            File calSheetFile = new File(path + calSheetTextField.getText());
 
-        if (!"".equals(nox500TextField.getText())) {
+            FileInputStream calSheetInputStream = new FileInputStream(calSheetFile);
+            Workbook calSheetWorkbook = WorkbookFactory.create(calSheetInputStream);
+            Sheet calSheetSheet = calSheetWorkbook.getSheetAt(1);
 
-            for(int i=0; i<nox500List.size(); i++) {
-                excelWriter(calSheetWorkbook,calSheetSheet,1,4,i+1,nox500List.get(i));
+            if (!"".equals(nox500TextField.getText())) {
+
+                for (int i = 0; i < nox500List.size(); i++) {
+                    excelWriter(calSheetWorkbook, calSheetSheet, 1, 4, i + 1, nox500List.get(i));
+                }
             }
-        }
 
-        if (!"".equals(nox2500TextField.getText())) {
+            if (!"".equals(nox2500TextField.getText())) {
 
-            for(int i=0; i<nox2500List.size(); i++) {
-                excelWriter(calSheetWorkbook,calSheetSheet,1,5,i+1,nox2500List.get(i));
+                for (int i = 0; i < nox2500List.size(); i++) {
+                    excelWriter(calSheetWorkbook, calSheetSheet, 1, 5, i + 1, nox2500List.get(i));
+                }
             }
-        }
 
-        if (!"".equals(nox10kTextField.getText())) {
+            if (!"".equals(nox10kTextField.getText())) {
 
-            for(int i=0; i<nox10kList.size(); i++) {
-                excelWriter(calSheetWorkbook,calSheetSheet,1,6,i+1,nox10kList.get(i));
+                for (int i = 0; i < nox10kList.size(); i++) {
+                    excelWriter(calSheetWorkbook, calSheetSheet, 1, 6, i + 1, nox10kList.get(i));
+                }
             }
-        }
 
-        if (!"".equals(no500TextField.getText())) {
+            if (!"".equals(no500TextField.getText())) {
 
-            for(int i=0; i<no500List.size(); i++) {
-                excelWriter(calSheetWorkbook,calSheetSheet,1,7,i+1,no500List.get(i));
+                for (int i = 0; i < no500List.size(); i++) {
+                    excelWriter(calSheetWorkbook, calSheetSheet, 1, 7, i + 1, no500List.get(i));
+                }
             }
-        }
 
-        if (!"".equals(no2500TextField.getText())) {
+            if (!"".equals(no2500TextField.getText())) {
 
-            for(int i=0; i<no2500List.size(); i++) {
-                excelWriter(calSheetWorkbook,calSheetSheet,1,8,i+1,no2500List.get(i));
+                for (int i = 0; i < no2500List.size(); i++) {
+                    excelWriter(calSheetWorkbook, calSheetSheet, 1, 8, i + 1, no2500List.get(i));
+                }
             }
-        }
 
-        if (!"".equals(no10kTextField.getText())) {
+            if (!"".equals(no10kTextField.getText())) {
 
-            for(int i=0; i<no10kList.size(); i++) {
-                excelWriter(calSheetWorkbook,calSheetSheet,1,9,i+1,no10kList.get(i));
+                for (int i = 0; i < no10kList.size(); i++) {
+                    excelWriter(calSheetWorkbook, calSheetSheet, 1, 9, i + 1, no10kList.get(i));
+                }
             }
-        }
 
-        if (!"".equals(thc500TextField.getText())) {
+            if (!"".equals(thc500TextField.getText())) {
 
-            for(int i=0; i<thc500List.size(); i++) {
-                excelWriter(calSheetWorkbook,calSheetSheet,1,10,i+1,thc500List.get(i));
+                for (int i = 0; i < thc500List.size(); i++) {
+                    excelWriter(calSheetWorkbook, calSheetSheet, 1, 10, i + 1, thc500List.get(i));
+                }
             }
-        }
 
-        if (!"".equals(thc2500TextField.getText())) {
+            if (!"".equals(thc2500TextField.getText())) {
 
-            for(int i=0; i<thc2500List.size(); i++) {
-                excelWriter(calSheetWorkbook,calSheetSheet,1,11,i+1,thc2500List.get(i));
+                for (int i = 0; i < thc2500List.size(); i++) {
+                    excelWriter(calSheetWorkbook, calSheetSheet, 1, 11, i + 1, thc2500List.get(i));
+                }
             }
-        }
 
-        if (!"".equals(thc10kTextField.getText())) {
+            if (!"".equals(thc10kTextField.getText())) {
 
-            for(int i=0; i<thc10kList.size(); i++) {
-                excelWriter(calSheetWorkbook,calSheetSheet,1,12,i+1,thc10kList.get(i));
+                for (int i = 0; i < thc10kList.size(); i++) {
+                    excelWriter(calSheetWorkbook, calSheetSheet, 1, 12, i + 1, thc10kList.get(i));
+                }
             }
-        }
 
-        if (!"".equals(ch4500TextField.getText())) {
+            if (!"".equals(ch4500TextField.getText())) {
 
-            for(int i=0; i<ch4500List.size(); i++) {
-                excelWriter(calSheetWorkbook,calSheetSheet,1,13,i+1,ch4500List.get(i));
+                for (int i = 0; i < ch4500List.size(); i++) {
+                    excelWriter(calSheetWorkbook, calSheetSheet, 1, 13, i + 1, ch4500List.get(i));
+                }
             }
-        }
 
-        if (!"".equals(ch42500TextField.getText())) {
+            if (!"".equals(ch42500TextField.getText())) {
 
-            for(int i=0; i<ch42500List.size(); i++) {
-                excelWriter(calSheetWorkbook,calSheetSheet,1,14,i+1,ch42500List.get(i));
+                for (int i = 0; i < ch42500List.size(); i++) {
+                    excelWriter(calSheetWorkbook, calSheetSheet, 1, 14, i + 1, ch42500List.get(i));
+                }
             }
-        }
 
-        if (!"".equals(ch410kTextField.getText())) {
+            if (!"".equals(ch410kTextField.getText())) {
 
-            for(int i=0; i<ch410kList.size(); i++) {
-                excelWriter(calSheetWorkbook,calSheetSheet,1,15,i+1,ch410kList.get(i));
+                for (int i = 0; i < ch410kList.size(); i++) {
+                    excelWriter(calSheetWorkbook, calSheetSheet, 1, 15, i + 1, ch410kList.get(i));
+                }
             }
-        }
 
-        if (!"".equals(co5000TextField.getText())) {
+            if (!"".equals(co5000TextField.getText())) {
 
-            for(int i=0; i<co5000List.size(); i++) {
-                excelWriter(calSheetWorkbook,calSheetSheet,1,16,i+1,co5000List.get(i));
+                for (int i = 0; i < co5000List.size(); i++) {
+                    excelWriter(calSheetWorkbook, calSheetSheet, 1, 16, i + 1, co5000List.get(i));
+                }
             }
-        }
 
-        if (!"".equals(cohighTextField.getText())) {
+            if (!"".equals(cohighTextField.getText())) {
 
-            for(int i=0; i<coHighList.size(); i++) {
-                excelWriter(calSheetWorkbook,calSheetSheet,1,17,i+1,coHighList.get(i));
+                for (int i = 0; i < coHighList.size(); i++) {
+                    excelWriter(calSheetWorkbook, calSheetSheet, 1, 17, i + 1, coHighList.get(i));
+                }
             }
-        }
 
-        if (!"".equals(co216TextField.getText())) {
+            if (!"".equals(co216TextField.getText())) {
 
-            for(int i=0; i<co216List.size(); i++) {
-                excelWriter(calSheetWorkbook,calSheetSheet,1,18,i+1,co216List.get(i));
+                for (int i = 0; i < co216List.size(); i++) {
+                    excelWriter(calSheetWorkbook, calSheetSheet, 1, 18, i + 1, co216List.get(i));
+                }
             }
-        }
 
-        if (!"".equals(eco2TextField.getText())) {
+            if (!"".equals(eco2TextField.getText())) {
 
-            for(int i=0; i<egr16List.size(); i++) {
-                excelWriter(calSheetWorkbook,calSheetSheet,1,19,i+1,egr16List.get(i));
+                for (int i = 0; i < egr16List.size(); i++) {
+                    excelWriter(calSheetWorkbook, calSheetSheet, 1, 19, i + 1, egr16List.get(i));
+                }
             }
-        }
 
-        if (!"".equals(o225TextField.getText())) {
+            if (!"".equals(o225TextField.getText())) {
 
-            for(int i=0; i<o225List.size(); i++) {
-                excelWriter(calSheetWorkbook,calSheetSheet,1,20,i+1,o225List.get(i));
+                for (int i = 0; i < o225List.size(); i++) {
+                    excelWriter(calSheetWorkbook, calSheetSheet, 1, 20, i + 1, o225List.get(i));
+                }
             }
-        }
 
-        //**************************************************************************************************************
-        //N2 Bottle#1
-        //**************************************************************************************************************
-        if (!"".equals(n21TextField.getText())) {
+            //**************************************************************************************************************
+            //N2 Bottle#1
+            //**************************************************************************************************************
+            if (!"".equals(n21TextField.getText())) {
 
-            //1016 N2 #1 Lot
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 24, 3, n21List.get(3));
+                //1016 N2 #1 Lot
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 24, 3, n21List.get(3));
 
-            //1016 N2 #1 Analysis Cylinder
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 22, 3, n21List.get(1));
+                //1016 N2 #1 Analysis Cylinder
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 22, 3, n21List.get(1));
 
-            //1016 N2 #1 Certification Date
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 25, 3, n21List.get(2));
+                //1016 N2 #1 Certification Date
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 25, 3, n21List.get(2));
 
-            //1016 N2 #1 Cylinder Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 23, 3, n21List.get(0));
-        } else {
-            //1016 N2 #1 Lot
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 24, 3, "N/A");
+                //1016 N2 #1 Cylinder Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 23, 3, n21List.get(0));
+            } else {
+                //1016 N2 #1 Lot
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 24, 3, "N/A");
 
-            //1016 N2 #1 Analysis Cylinder
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 22, 3, "N/A");
-        }
+                //1016 N2 #1 Analysis Cylinder
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 22, 3, "N/A");
+            }
 
-        //**************************************************************************************************************
-        //N2 Bottle #2
-        //**************************************************************************************************************
-        if (!"".equals(n22TextField.getText())) {
+            //**************************************************************************************************************
+            //N2 Bottle #2
+            //**************************************************************************************************************
+            if (!"".equals(n22TextField.getText())) {
 
-            //1016 N2 #2 Lot Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 24, 4, n22List.get(3));
+                //1016 N2 #2 Lot Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 24, 4, n22List.get(3));
 
-            //1016 N2 #2 Analysis Cylinder
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 22, 4, n22List.get(1));
+                //1016 N2 #2 Analysis Cylinder
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 22, 4, n22List.get(1));
 
-            //1016 N2 #2 Certification Date
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 25, 4, n22List.get(2));
+                //1016 N2 #2 Certification Date
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 25, 4, n22List.get(2));
 
-            //1016 N2 #2 Cylinder Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 23, 4, n22List.get(0));
-        }else {
-            //1016 N2 #2 Lot Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 24, 4, "N/A");
+                //1016 N2 #2 Cylinder Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 23, 4, n22List.get(0));
+            } else {
+                //1016 N2 #2 Lot Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 24, 4, "N/A");
 
-            //1016 N2 #2 Analysis Cylinder
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 22, 4, "N/A");
-        }
+                //1016 N2 #2 Analysis Cylinder
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 22, 4, "N/A");
+            }
 
-        //**************************************************************************************************************
-        //N2 Bottle #3
-        //**************************************************************************************************************
-        if (!"".equals(n23TextField.getText())) {
+            //**************************************************************************************************************
+            //N2 Bottle #3
+            //**************************************************************************************************************
+            if (!"".equals(n23TextField.getText())) {
 
-            //1016 N2 #3 Lot Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 24, 5, n23List.get(3));
+                //1016 N2 #3 Lot Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 24, 5, n23List.get(3));
 
-            //1016 N2 #3 Analysis Cylinder
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 22, 5, n23List.get(1));
+                //1016 N2 #3 Analysis Cylinder
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 22, 5, n23List.get(1));
 
-            //1016 N2 #3 Certification Date
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 25, 5, n23List.get(2));
+                //1016 N2 #3 Certification Date
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 25, 5, n23List.get(2));
 
-            //1016 N2 #3 Cylinder Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 23, 5, n23List.get(0));
-        }else {
-            //1016 N2 #3 Lot Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 24, 5, "N/A");
+                //1016 N2 #3 Cylinder Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 23, 5, n23List.get(0));
+            } else {
+                //1016 N2 #3 Lot Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 24, 5, "N/A");
 
-            //1016 N2 #3 Analysis Cylinder
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 22, 5, "N/A");
-        }
+                //1016 N2 #3 Analysis Cylinder
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 22, 5, "N/A");
+            }
 
-        //**************************************************************************************************************
-        //N2 Bottle #4
-        //**************************************************************************************************************
-        if (!"".equals(n24TextField.getText())) {
+            //**************************************************************************************************************
+            //N2 Bottle #4
+            //**************************************************************************************************************
+            if (!"".equals(n24TextField.getText())) {
 
-            //1016 N2 #4 Lot Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 24, 6, n24List.get(3));
+                //1016 N2 #4 Lot Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 24, 6, n24List.get(3));
 
-            //1016 N2 #3 Analysis Cylinder
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 22, 6, n24List.get(1));
+                //1016 N2 #3 Analysis Cylinder
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 22, 6, n24List.get(1));
 
-            //1016 N2 #4 Certification Date
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 25, 6, n24List.get(2));
+                //1016 N2 #4 Certification Date
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 25, 6, n24List.get(2));
 
-            //1016 N2 #4 Cylinder Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 23, 6, n24List.get(0));
-        }else {
-            //1016 N2 #4 Lot Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 24, 6, "N/A");
+                //1016 N2 #4 Cylinder Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 23, 6, n24List.get(0));
+            } else {
+                //1016 N2 #4 Lot Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 24, 6, "N/A");
 
-            //1016 N2 #3 Analysis Cylinder
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 22, 6, "N/A");
-        }
+                //1016 N2 #3 Analysis Cylinder
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 22, 6, "N/A");
+            }
 
-        //**************************************************************************************************************
-        //Air Bottle #1
-        //**************************************************************************************************************
-        if (!"".equals(air1TextField.getText())) {
+            //**************************************************************************************************************
+            //Air Bottle #1
+            //**************************************************************************************************************
+            if (!"".equals(air1TextField.getText())) {
 
-            //1016 Air #1 Lot Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 30, 3, air1List.get(3));
+                //1016 Air #1 Lot Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 30, 3, air1List.get(3));
 
-            //1016 Air #1 Analysis Cylinder
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 28, 3, air1List.get(1));
+                //1016 Air #1 Analysis Cylinder
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 28, 3, air1List.get(1));
 
-            //1016 Air #1 Certification Date
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 31, 3, air1List.get(2));
+                //1016 Air #1 Certification Date
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 31, 3, air1List.get(2));
 
-            //1016 Air #1 Cylinder Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 29, 3, air1List.get(0));
-        }else {
-            //1016 Air #1 Lot Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 30, 3, "N/A");
+                //1016 Air #1 Cylinder Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 29, 3, air1List.get(0));
+            } else {
+                //1016 Air #1 Lot Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 30, 3, "N/A");
 
-            //1016 Air #1 Analysis Cylinder
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 28, 3, "N/A");
-        }
+                //1016 Air #1 Analysis Cylinder
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 28, 3, "N/A");
+            }
 
-        //**************************************************************************************************************
-        //Air Bottle #2
-        //**************************************************************************************************************
-        if (!"".equals(air2TextField.getText())) {
+            //**************************************************************************************************************
+            //Air Bottle #2
+            //**************************************************************************************************************
+            if (!"".equals(air2TextField.getText())) {
 
-            //1016 Air #2 Lot Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 30, 4, air2List.get(3));
+                //1016 Air #2 Lot Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 30, 4, air2List.get(3));
 
-            //1016 Air #2 Analysis Cylinder
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 28, 4, air2List.get(1));
+                //1016 Air #2 Analysis Cylinder
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 28, 4, air2List.get(1));
 
-            //1016 Air #2 Certification Date
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 31, 4, air2List.get(2));
+                //1016 Air #2 Certification Date
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 31, 4, air2List.get(2));
 
-            //1016 Air #2 Cylinder Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 29, 4, air2List.get(0));
-        }else {
-            //1016 Air #2 Lot Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 30, 4, "N/A");
+                //1016 Air #2 Cylinder Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 29, 4, air2List.get(0));
+            } else {
+                //1016 Air #2 Lot Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 30, 4, "N/A");
 
-            //1016 Air #2 Analysis Cylinder
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 28, 4, "N/A");
-        }
+                //1016 Air #2 Analysis Cylinder
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 28, 4, "N/A");
+            }
 
-        //**************************************************************************************************************
-        //Air Bottle #3
-        //**************************************************************************************************************
-        if (!"".equals(air3TextField.getText())) {
-
-
-            //1016 Air #3 Lot Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 30, 5, air3List.get(3));
-
-            //1016 Air #3 Analysis Cylinder
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 28, 5, air3List.get(1));
-
-            //1016 Air #3 Certification Date
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 31, 5, air3List.get(2));
-
-            //1016 Air #3 Cylinder Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 29, 5, air3List.get(0));
-        }else {
-            //1016 Air #3 Lot Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 30, 5, "N/A");
-
-            //1016 Air #3 Analysis Cylinder
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 28, 5, "N/A");
-        }
-
-        //**************************************************************************************************************
-        //Air Bottle #4
-        //**************************************************************************************************************
-        if (!"".equals(air4TextField.getText())) {
-            //1016 Air #4 Lot Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 30, 6, air4List.get(3));
-
-            //1016 Air #4 Analysis Cylinder
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 28, 6, air4List.get(1));
-
-            //1016 Air #4 Certification Date
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 31, 6, air4List.get(2));
-
-            //1016 Air #4 Cylinder Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 29, 6, air4List.get(0));
-        }else {
-            //1016 Air #4 Lot Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 30, 6, "N/A");
-
-            //1016 Air #4 Analysis Cylinder
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 28, 6, "N/A");
-        }
-
-        //**************************************************************************************************************
-        //Fuel Bottle #1
-        //**************************************************************************************************************
-        if (!"".equals(fuel1TextField.getText())) {
+            //**************************************************************************************************************
+            //Air Bottle #3
+            //**************************************************************************************************************
+            if (!"".equals(air3TextField.getText())) {
 
 
-            //1016 Fuel 1 Lot
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 36, 3, fuel1List.get(3));
+                //1016 Air #3 Lot Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 30, 5, air3List.get(3));
 
-            //1016 Fuel 1 analysis cylinder
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 34, 3, fuel1List.get(1));
+                //1016 Air #3 Analysis Cylinder
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 28, 5, air3List.get(1));
 
-            //1016 Fuel 1 Cert Date
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 37, 3, fuel1List.get(2));
+                //1016 Air #3 Certification Date
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 31, 5, air3List.get(2));
 
-            //1016 fuel 1 cylinder number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 35, 3, fuel1List.get(0));
-        }else {
-            //1016 Fuel 1 Lot
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 36, 3, "N/A");
+                //1016 Air #3 Cylinder Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 29, 5, air3List.get(0));
+            } else {
+                //1016 Air #3 Lot Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 30, 5, "N/A");
 
-            //1016 Fuel 1 analysis cylinder
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 34, 3, "N/A");
-        }
+                //1016 Air #3 Analysis Cylinder
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 28, 5, "N/A");
+            }
 
-        //**************************************************************************************************************
-        //Fuel Bottle #2
-        //**************************************************************************************************************
-        if (!"".equals(fuel2TextField.getText())) {
-            //1016 Fuel 2 Lot
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 36, 4, fuel2List.get(3));
+            //**************************************************************************************************************
+            //Air Bottle #4
+            //**************************************************************************************************************
+            if (!"".equals(air4TextField.getText())) {
+                //1016 Air #4 Lot Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 30, 6, air4List.get(3));
 
-            //1016 Fuel 2 analysis cylinder
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 34, 4, fuel2List.get(1));
+                //1016 Air #4 Analysis Cylinder
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 28, 6, air4List.get(1));
 
-            //1016 Fuel 2 Cert Date
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 37, 4, fuel2List.get(2));
+                //1016 Air #4 Certification Date
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 31, 6, air4List.get(2));
 
-            //1016 fuel 2 cylinder number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 35, 4, fuel2List.get(0));
-        }else {
-            //1016 Fuel 2 Lot
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 36, 4, "N/A");
+                //1016 Air #4 Cylinder Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 29, 6, air4List.get(0));
+            } else {
+                //1016 Air #4 Lot Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 30, 6, "N/A");
 
-            //1016 Fuel 2 analysis cylinder
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 34, 4, "N/A");
-        }
+                //1016 Air #4 Analysis Cylinder
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 28, 6, "N/A");
+            }
 
-        //**************************************************************************************************************
-        //O2 100% Bottle #1
-        //**************************************************************************************************************
-        if (!"".equals(o21001TextField.getText())) {
+            //**************************************************************************************************************
+            //Fuel Bottle #1
+            //**************************************************************************************************************
+            if (!"".equals(fuel1TextField.getText())) {
+
+
+                //1016 Fuel 1 Lot
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 36, 3, fuel1List.get(3));
+
+                //1016 Fuel 1 analysis cylinder
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 34, 3, fuel1List.get(1));
+
+                //1016 Fuel 1 Cert Date
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 37, 3, fuel1List.get(2));
+
+                //1016 fuel 1 cylinder number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 35, 3, fuel1List.get(0));
+            } else {
+                //1016 Fuel 1 Lot
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 36, 3, "N/A");
+
+                //1016 Fuel 1 analysis cylinder
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 34, 3, "N/A");
+            }
+
+            //**************************************************************************************************************
+            //Fuel Bottle #2
+            //**************************************************************************************************************
+            if (!"".equals(fuel2TextField.getText())) {
+                //1016 Fuel 2 Lot
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 36, 4, fuel2List.get(3));
+
+                //1016 Fuel 2 analysis cylinder
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 34, 4, fuel2List.get(1));
+
+                //1016 Fuel 2 Cert Date
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 37, 4, fuel2List.get(2));
+
+                //1016 fuel 2 cylinder number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 35, 4, fuel2List.get(0));
+            } else {
+                //1016 Fuel 2 Lot
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 36, 4, "N/A");
+
+                //1016 Fuel 2 analysis cylinder
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 34, 4, "N/A");
+            }
+
+            //**************************************************************************************************************
+            //O2 100% Bottle #1
+            //**************************************************************************************************************
+            if (!"".equals(o21001TextField.getText())) {
 
                 //1040 O2 100% #1 Lot Number
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 42, 3, o21001List.get(4));
@@ -3396,16 +3398,16 @@ try {
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 45, 3, o21001List.get(0));
 
 
-        } else {
-            //1040 O2 100% #1 Lot Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 42, 3, "N/A");
-            //1040 O2 100% #1 Analysis Cylinder
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 40, 3, "N/A");
-        }
-        //**************************************************************************************************************
-        //O2 100% Bottle #2
-        //**************************************************************************************************************
-        if (!"".equals(o21002TextField.getText())) {
+            } else {
+                //1040 O2 100% #1 Lot Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 42, 3, "N/A");
+                //1040 O2 100% #1 Analysis Cylinder
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 40, 3, "N/A");
+            }
+            //**************************************************************************************************************
+            //O2 100% Bottle #2
+            //**************************************************************************************************************
+            if (!"".equals(o21002TextField.getText())) {
 
                 //1040 O2 100% #2 Lot Number
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 42, 4, o21002List.get(4));
@@ -3423,17 +3425,16 @@ try {
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 45, 4, o21002List.get(0));
 
 
-
-        } else {
-            //1040 O2 100% #1 Lot Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 42, 4, "N/A");
-            //1040 O2 100% #2 Analysis Cylinder
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 40, 4, "N/A");
-        }
-        //**************************************************************************************************************
-        //O2 100% Bottle #3
-        //**************************************************************************************************************
-        if (!"".equals(o21003TextField.getText())) {
+            } else {
+                //1040 O2 100% #1 Lot Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 42, 4, "N/A");
+                //1040 O2 100% #2 Analysis Cylinder
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 40, 4, "N/A");
+            }
+            //**************************************************************************************************************
+            //O2 100% Bottle #3
+            //**************************************************************************************************************
+            if (!"".equals(o21003TextField.getText())) {
 
                 //1040 O2 100% #3 Lot Number
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 42, 5, o21003List.get(4));
@@ -3451,55 +3452,57 @@ try {
                 excelWriter(calSheetWorkbook, calSheetSheet, 1, 45, 5, o21003List.get(0));
 
 
+            } else {
+                //1040 O2 100% #1 Lot Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 42, 5, "N/A");
+                //1040 O2 100% #3 Analysis Cylinder
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 40, 5, "N/A");
+            }
+            //**************************************************************************************************************
+            //O2 100% Bottle # 4
+            //**************************************************************************************************************
+            if (!"".equals(o21004TextField.getText())) {
 
-        }else {
-            //1040 O2 100% #1 Lot Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 42, 5, "N/A");
-            //1040 O2 100% #3 Analysis Cylinder
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 40, 5, "N/A");
+                //1040 O2 100% #3 Lot Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 42, 6, o21003List.get(4));
+
+                //1040 O2 100% #3 Analysis Cylinder
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 40, 6, o21003List.get(2));
+
+                //1040 O2 100% #3 Certification Date
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 43, 6, o21003List.get(3));
+
+                //1040 O2 100% #3 Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 41, 6, o21003List.get(1));
+
+                //1040 O2 100% #3 Concentration
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 45, 6, o21003List.get(0));
+
+
+            } else {
+                //1040 O2 100% #1 Lot Number
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 42, 6, "N/A");
+
+                excelWriter(calSheetWorkbook, calSheetSheet, 1, 40, 6, "N/A");
+            }
+
+
+            //Closing the 1016
+            calSheetInputStream.close();
+            FileOutputStream calSheetOutputStream = new FileOutputStream(path + calSheetTextField.getText());
+            calSheetWorkbook.write(calSheetOutputStream);
+            calSheetWorkbook.close();
+            calSheetOutputStream.close();
+
+            clearLists();
+
+            JOptionPane.showMessageDialog(null, "All Gases exported to Cal Sheet!");
+
+
+            openSpreadSheet(calSheetFile);
+        }catch(Exception e) {
+            JOptionPane.showMessageDialog(null,e);
         }
-        //**************************************************************************************************************
-        //O2 100% Bottle # 4
-        //**************************************************************************************************************
-        if (!"".equals(o21004TextField.getText())) {
-
-            //1040 O2 100% #3 Lot Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 42, 6, o21003List.get(4));
-
-            //1040 O2 100% #3 Analysis Cylinder
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 40, 6, o21003List.get(2));
-
-            //1040 O2 100% #3 Certification Date
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 43, 6, o21003List.get(3));
-
-            //1040 O2 100% #3 Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 41, 6, o21003List.get(1));
-
-            //1040 O2 100% #3 Concentration
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 45, 6, o21003List.get(0));
-
-
-        }else {
-            //1040 O2 100% #1 Lot Number
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 42, 6, "N/A");
-
-            excelWriter(calSheetWorkbook, calSheetSheet, 1, 40, 6, "N/A");
-        }
-
-
-        //Closing the 1016
-        calSheetInputStream.close();
-        FileOutputStream calSheetOutputStream = new FileOutputStream(path + calSheetTextField.getText());
-        calSheetWorkbook.write(calSheetOutputStream);
-        calSheetWorkbook.close();
-        calSheetOutputStream.close();
-
-        clearLists();
-
-        JOptionPane.showMessageDialog(null, "All Gases exported to Cal Sheet!");
-
-
-        openSpreadSheet(calSheetFile);
 
 
     }
