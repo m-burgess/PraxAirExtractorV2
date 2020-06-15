@@ -1001,7 +1001,7 @@ public class Controller {
                     String thc500replaceText1 = fileTextArray[i].replace("Propane 158 ppm ", "");
                     String thc500replaceText2 = thc500replaceText1.replace("Propane 4.0 Research 158 ppm ", "");
                     String thc500replaceText3 = thc500replaceText2.replace("Propane 2.5 Instrument 158 ppm ", "");
-                    String thc500span = thc500replaceText3.substring(0, 3);
+                    String thc500span = thc500replaceText3.substring(0, 4);
                     double thc500newspan = Double.parseDouble(thc500span);
                     double thc500spanx3 = thc500newspan * 3;
                     BigDecimal thc500spanDecimal = new BigDecimal(Double.toString(thc500spanx3));
@@ -1193,6 +1193,7 @@ public class Controller {
                     String thc10kreplaceText1 = fileTextArray[i].replace("Propane 2.5 Instrument 3200 ppm ", "");
                     String thc10kreplaceText2 = thc10kreplaceText1.replace("Propane 3200 ppm ", "");
                     String thc10kreplaceText3 = thc10kreplaceText2.replace("Propane 4.0 Research 3200 ppm ", "");
+                    String thc10kreplaceText4 = thc10kreplaceText3.replace("Propane 2.5 Chemically Pure (CP) 3200 ppm ","");
                     String thc10kspan = thc10kreplaceText3.substring(0, 4);
                     int thc10kspanint = Integer.parseInt(thc10kspan);
                     int thc10kspanx3 = thc10kspanint * 3;
@@ -1372,8 +1373,8 @@ public class Controller {
                 if (fileTextArray[i].contains("Methane 2500")) {
 
                     //CH4 2500 Span value
-                    String ch42500replaceText1 = fileTextArray[i].replace("Methane 2500 ppm ", "");
-                    String ch42500replaceText2 = ch42500replaceText1.replace("Methane 3.7 Ultra High Purity 2500 ppm ", "");
+                    String ch42500replaceText1 = fileTextArray[i].replace("Methane 2375 ppm ", "");
+                    String ch42500replaceText2 = ch42500replaceText1.replace("Methane 3.7 Ultra High Purity 2375 ppm ", "");
                     String ch42500span = ch42500replaceText2.substring(0, 4);
 
                     ch42500List.add(ch42500span);
@@ -1727,7 +1728,7 @@ public class Controller {
                 if (fileTextArray[i].contains("Carbon dioxide")) {
 
                     //CO2 Span value
-                    String co216replaceText1 = fileTextArray[i].replace("Carbon dioxide 5.5 LaserStar 15.2 %  ", "");
+                    String co216replaceText1 = fileTextArray[i].replace("Carbon dioxide 5.5 LaserStar 15.2 % ", "");
                     String co216span = co216replaceText1.substring(0, 5);
 
                     co216List.add(co216span);
@@ -2521,8 +2522,7 @@ public class Controller {
                 if (fileTextArray[i].contains("Oxygen ≥ 99.993 % ")) {
 
 
-                    String o21001replaceText1 = fileTextArray[i].replace("Oxygen ≥ 99.993 %  ", "");
-                    String o21001Concentration = o21001replaceText1.substring(0,6);
+                    String o21001Concentration = fileTextArray[i].substring(18,24);
 
 
                     o21001List.add(o21001Concentration);
@@ -2596,9 +2596,7 @@ public class Controller {
                 }
                 if (fileTextArray2[i].contains("Oxygen ≥ 99.993 % ")) {
 
-
-                    String o21002replaceText1 = fileTextArray2[i].replace("Oxygen ≥ 99.993 %  ", "");
-                    String o21002Concentration = o21002replaceText1.substring(0,6);
+                    String o21002Concentration = fileTextArray2[i].substring(18,24);
 
 
                     o21002List.add(o21002Concentration);
@@ -2671,8 +2669,7 @@ public class Controller {
                 if (fileTextArray3[i].contains("Oxygen ≥ 99.993 % ")) {
 
 
-                    String o21003replaceText1 = fileTextArray3[i].replace("Oxygen ≥ 99.993 %  ", "");
-                    String o21003Concentration = o21003replaceText1.substring(0,6);
+                    String o21003Concentration = fileTextArray3[i].substring(18,24);
 
 
                     o21003List.add(o21003Concentration);
@@ -2747,8 +2744,7 @@ public class Controller {
                 if (fileTextArray4[i].contains("Oxygen ≥ 99.993 % ")) {
 
 
-                    String o21004replaceText1 = fileTextArray4[i].replace("Oxygen ≥ 99.993 %  ", "");
-                    String o21004Concentration = o21004replaceText1.substring(0,6);
+                    String o21004Concentration = fileTextArray4[i].substring(18,24);
 
 
                     o21004List.add(o21004Concentration);
