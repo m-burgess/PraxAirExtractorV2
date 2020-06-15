@@ -1193,6 +1193,7 @@ public class Controller {
                     String thc10kreplaceText1 = fileTextArray[i].replace("Propane 2.5 Instrument 3200 ppm ", "");
                     String thc10kreplaceText2 = thc10kreplaceText1.replace("Propane 3200 ppm ", "");
                     String thc10kreplaceText3 = thc10kreplaceText2.replace("Propane 4.0 Research 3200 ppm ", "");
+                    String thc10kreplaceText4 = thc10kreplaceText3.replace("Propane 2.5 Chemically Pure (CP) 3200 ppm ","");
                     String thc10kspan = thc10kreplaceText3.substring(0, 4);
                     int thc10kspanint = Integer.parseInt(thc10kspan);
                     int thc10kspanx3 = thc10kspanint * 3;
@@ -1372,8 +1373,8 @@ public class Controller {
                 if (fileTextArray[i].contains("Methane 2500")) {
 
                     //CH4 2500 Span value
-                    String ch42500replaceText1 = fileTextArray[i].replace("Methane 2500 ppm ", "");
-                    String ch42500replaceText2 = ch42500replaceText1.replace("Methane 3.7 Ultra High Purity 2500 ppm ", "");
+                    String ch42500replaceText1 = fileTextArray[i].replace("Methane 2375 ppm ", "");
+                    String ch42500replaceText2 = ch42500replaceText1.replace("Methane 3.7 Ultra High Purity 2375 ppm ", "");
                     String ch42500span = ch42500replaceText2.substring(0, 4);
 
                     ch42500List.add(ch42500span);
