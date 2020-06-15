@@ -1194,7 +1194,7 @@ public class Controller {
                     String thc10kreplaceText2 = thc10kreplaceText1.replace("Propane 3200 ppm ", "");
                     String thc10kreplaceText3 = thc10kreplaceText2.replace("Propane 4.0 Research 3200 ppm ", "");
                     String thc10kreplaceText4 = thc10kreplaceText3.replace("Propane 2.5 Chemically Pure (CP) 3200 ppm ","");
-                    String thc10kspan = thc10kreplaceText3.substring(0, 4);
+                    String thc10kspan = thc10kreplaceText4.substring(0, 4);
                     int thc10kspanint = Integer.parseInt(thc10kspan);
                     int thc10kspanx3 = thc10kspanint * 3;
                     String thc10knewspan = String.valueOf(thc10kspanx3);
