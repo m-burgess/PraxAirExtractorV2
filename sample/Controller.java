@@ -1728,7 +1728,7 @@ public class Controller {
                 if (fileTextArray[i].contains("Carbon dioxide")) {
 
                     //CO2 Span value
-                    String co216replaceText1 = fileTextArray[i].replace("Carbon dioxide 5.5 LaserStar 15.2 % ", "");
+                    String co216replaceText1 = fileTextArray[i].replace("Carbon dioxide 5.5 LaserStar 15.2 %  ", "");
                     String co216span = co216replaceText1.substring(0, 5);
 
                     co216List.add(co216span);
