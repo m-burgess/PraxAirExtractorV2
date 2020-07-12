@@ -1370,7 +1370,7 @@ public class Controller {
                     ch42500List.add(new SimpleDateFormat("d-MMM-yyyy").format(newFormattedDate));
 
                 }
-                if (fileTextArray[i].contains("Methane 2500")) {
+                if (fileTextArray[i].contains("Methane")) {
 
                     //CH4 2500 Span value
                     String ch42500replaceText1 = fileTextArray[i].replace("Methane 2375 ppm ", "");
@@ -1464,7 +1464,7 @@ public class Controller {
                     //SO(L) Span value
                     String ch410kreplaceText1 = fileTextArray[i].replace("Methane 3.7 Ultra High Purity 9500 ppm ", "");
                     String ch410kreplaceText2 = ch410kreplaceText1.replace("Methane 9500 ppm ", "");
-                    String ch410kspan = ch410kreplaceText1.substring(0, 4);
+                    String ch410kspan = ch410kreplaceText2.substring(0, 4);
 
                     ch410kList.add(ch410kspan);
 
