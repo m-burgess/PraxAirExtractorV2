@@ -5,6 +5,8 @@ import javax.swing.*;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ProgressBar;
+import javafx.scene.control.ProgressIndicator;
 import javafx.scene.control.TextField;
 import javafx.stage.Popup;
 import org.apache.pdfbox.pdmodel.PDDocument;
@@ -95,6 +97,8 @@ public class Controller {
     private TextField excel1016TextField;
     @FXML
     private TextField calSheetTextField;
+    @FXML
+    private ProgressBar exportProgess;
 
     //Span array to collect the information to write to excel
     ArrayList<String> spanLotList = new ArrayList<String>();
@@ -1640,6 +1644,9 @@ public class Controller {
 
                     //CO(H) Span value
                     String cohighspan = fileTextArray[i].substring(37, 42);
+                    if (cohighspan.contains("%")){
+                        cohighspan.replace("%", "0");
+                    }
                     BigDecimal cohighspanint = new BigDecimal(cohighspan);
                     BigDecimal cohighspandecimal = new BigDecimal(10000.000);
                     String cohighspanx10000 = cohighspanint.multiply(cohighspandecimal).toString();
@@ -2964,24 +2971,30 @@ try {
     nox500Extraction();
     nox2500extraction();
     nox10kExtraction();
+    exportProgess.setProgress(0.2);
     no500Extraction();
     no2500Extraction();
     no10kExtraction();
+    exportProgess.setProgress(0.4);
     thc500Extraction();
     thc2500Extraction();
     thc10kExtraction();
+    exportProgess.setProgress(0.5);
     ch4500Extraction();
     ch42500Extraction();
     ch410kExtraction();
+    exportProgess.setProgress(0.6);
     co5000Extraction();
     coHighExtraction();
     co215Extraction();
     egr16Extraction();
     o225Extraction();
+    exportProgess.setProgress(0.8);
     n2Extraction();
     airExtraction();
     o2100Extraction();
     fuelExtraction();
+    exportProgess.setProgress(1);
 
     fileDocument.close();
 
